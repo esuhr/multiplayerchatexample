@@ -1,4 +1,4 @@
-import * as pixi from 'pixi.js';
+const pixi = require('pixi.js');
 const socket = io();
 const roomContainer = document.getElementById('room');
 const c = document.getElementById('canvas');
