@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+    <style>
+        html body {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+    
+        #login-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        #login-username, #login-password {
+            font-family: "Inconsolata", monospace;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 300px;
+        }
+    
+        #login-button {
+            font-family: "Inconsolata", monospace;
+            background-color: blue;
+            border: none;
+            padding: 10px;
+            color: white;
+            width: 140px;
+        }
+    
+        #room {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin-top: 0px;
+            padding-top: 1em;
+            width: 300px;
+        }
+    
+        @font-face {
+            font-family: "Inconsolata";
+            src: url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyya15IDhunA.woff2) format('woff2');
+        }
+    
+        #chat-text, #chat-form, #chat-input {
+            font-family: "Inconsolata", monospace;
+            background-color: white;
+        }
+    
+        #chat-text {
+            height: 90vh;
+            width: 299px;
+            margin-bottom: 5px;
+            border: none;
+            overflow-y: scroll;
+        }
+    
+        #chat-input {
+            width: 270px;
+            border: 1px dotted gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <div id="login-animation"></div>
+        <input id="login-username" placeholder="username"></input>
+        <!-- <form>
+            <input id="login-password" type="password" placeholder="password"></input>
+        </form> -->
+        <button id="login-button">Login</button>
+    </div>
+    <div id="room" style="display: none;">
+        <div id="canvas"></div>
+        <div id="chat-container">
+            <div id="chat-text"></div>
+            <form id="chat-form">
+                <input id="chat-input" autocomplete="off" type="text"></input>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+    <script src="loginVis.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+</body>
+</html>
+
