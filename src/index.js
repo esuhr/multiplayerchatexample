@@ -1,5 +1,5 @@
-const pixi = require('pixi.js');
-const socket = require('socket.io');
+import * as pixi from 'pixi.js';
+const socket = io();
 const roomContainer = document.getElementById('room');
 const c = document.getElementById('canvas');
 const bunny = pixi.Texture.from('/assets/bunny.png');

@@ -2,7 +2,7 @@
   "name": "elliotgunnsuhrv2",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "server/index.js",
   "scripts": {
     "build-client-watch": "webpack -w",
     "start-dev": "npm run build-client-watch & npm run start-server",
