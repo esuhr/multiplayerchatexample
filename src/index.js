@@ -3,7 +3,6 @@ const socket = io();
 const roomContainer = document.getElementById('room');
 const c = document.getElementById('canvas');
 const bunny = pixi.Texture.from('/assets/bunny.png');
-const sky = pixi.Texture.from('assets/sky.png')
 const stage = new pixi.Container()
 const app = new pixi.Application({
     width: window.innerWidth - 300,

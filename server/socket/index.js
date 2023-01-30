@@ -164,6 +164,7 @@ module.exports = (io) => {
     
         socket.on('login', (data) => {
             Player.onConnect(socket, data.username);
+            console.log(`${data.username} logged in on ${socket.id}`)
             socket.emit('loginRes', {success: true});
             // loginValid(data, (res) => {
             //     if(res) {
